@@ -51,11 +51,11 @@ namespace Thinktecture.AuthorizationServer.WebHost.Areas.InitialConfiguration.Co
             {
                 var global = new GlobalConfiguration()
                 {
-                    AuthorizationServerName = model.Name,
+                    ASName = model.Name,
                     Issuer = model.Issuer,
-                    Administrators = new List<AuthorizationServerAdministrator>
+                    Administrators = new List<ASAdmin>
                     {
-                        new AuthorizationServerAdministrator{NameID = model.Admin}
+                        new ASAdmin{NameID = model.Admin}
                     }
                 };
                 authorizationServerAdministration.GlobalConfiguration = global;

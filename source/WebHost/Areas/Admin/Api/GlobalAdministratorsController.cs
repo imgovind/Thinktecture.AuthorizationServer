@@ -45,7 +45,7 @@ namespace Thinktecture.AuthorizationServer.WebHost.Areas.Admin.Api
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState.GetErrors());
             }
 
-            var item = new AuthorizationServer.Models.AuthorizationServerAdministrator { NameID = nameID };
+            var item = new AuthorizationServer.Models.ASAdmin { NameID = nameID };
             this.config.GlobalConfiguration.Administrators.Add(item);
             this.config.SaveChanges();
 

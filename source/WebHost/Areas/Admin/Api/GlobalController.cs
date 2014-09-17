@@ -28,8 +28,8 @@ namespace Thinktecture.AuthorizationServer.WebHost.Areas.Admin.Api
             var config = this.config.GlobalConfiguration;
             var vm = new GlobalViewModel
             {
-                Name = config.AuthorizationServerName,
-                Logo = config.AuthorizationServerLogoUrl,
+                Name = config.ASName,
+                Logo = config.ASLogoUrl,
                 Issuer = config.Issuer
             };
 
@@ -44,8 +44,8 @@ namespace Thinktecture.AuthorizationServer.WebHost.Areas.Admin.Api
             }
             
             var config = this.config.GlobalConfiguration;
-            this.config.GlobalConfiguration.AuthorizationServerName = model.Name;
-            this.config.GlobalConfiguration.AuthorizationServerLogoUrl = model.Logo;
+            this.config.GlobalConfiguration.ASName = model.Name;
+            this.config.GlobalConfiguration.ASLogoUrl = model.Logo;
             this.config.GlobalConfiguration.Issuer = model.Issuer;
             this.config.SaveChanges();
 

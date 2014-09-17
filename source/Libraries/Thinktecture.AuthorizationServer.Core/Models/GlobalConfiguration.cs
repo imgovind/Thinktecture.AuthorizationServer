@@ -9,15 +9,15 @@ namespace Thinktecture.AuthorizationServer.Models
         [Key]
         public virtual int ID { get; set; }
         [Required]
-        public virtual string AuthorizationServerName { get; set; }
-        public virtual string AuthorizationServerLogoUrl { get; set; }
+        public virtual string ASName { get; set; }
+        public virtual string ASLogoUrl { get; set; }
         [Required]
         public virtual string Issuer { get; set; }
 
-        public virtual List<AuthorizationServerAdministrator> Administrators { get; set; }
+        public virtual List<ASAdmin> Administrators { get; set; }
     }
 
-    public class AuthorizationServerAdministrator
+    public class ASAdmin
     {
         public int ID { get; set; }
         public string NameID { get; set; }

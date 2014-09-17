@@ -28,7 +28,7 @@ namespace Thinktecture.AuthorizationServer.WebHost.Controllers
             var global = config.GlobalConfiguration;
             if (global != null)
             {
-                ViewData["ServerName"] = global.AuthorizationServerName;
+                ViewData["ServerName"] = global.ASName;
             }
             return PartialView("Banner");
         }
