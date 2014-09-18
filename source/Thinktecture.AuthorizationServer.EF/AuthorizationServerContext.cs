@@ -11,7 +11,7 @@ namespace Thinktecture.AuthorizationServer.EF
     public class AuthorizationServerContext : DbContext
     {
         public AuthorizationServerContext()
-            : base("AuthorizationServerContext")
+            : base("AuthorizationServerConfiguration")
         {
         }
 
